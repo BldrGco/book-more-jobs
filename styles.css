@@ -123,27 +123,41 @@ section {
     padding: 2rem 1rem;
 }
 
-#problem {
-    background: #E8ECEF;
+/* Gradient Sections */
+.gradient-section {
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header/Footer */
+    color: #FFFFFF;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-#solution {
-    background: #F5F5F5;
+.gradient-section h2 {
+    color: #FFFFFF; /* White headings */
 }
 
-#proof {
-    background: #E8ECEF;
+.gradient-section p,
+.gradient-section li {
+    color: #D3D3D3; /* Light gray text */
 }
 
-footer {
-    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header */
-    color: #FFFFFF; /* White */
-    padding: 2rem 1rem;
+/* Problem Section - Hammer Icon */
+.hammer-icon::before {
+    content: '🔨';
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
 }
 
-footer p {
-    margin-bottom: 1rem;
-    color: #D3D3D3; /* Light gray */
+/* Solution Section - Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Solution Section - Side by Side Layout */
@@ -168,22 +182,26 @@ footer p {
     margin: 1rem 0;
 }
 
-/* Diagram Styles */
+/* Updated Diagram Styles */
 .diagram-container {
     flex: 1;
     max-width: 500px;
     padding: 1rem;
-    background: #fff;
-    border: 2px solid #1A2526; /* Black border */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 2px solid #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
 }
 
-.email-box {
-    background: #1A2526; /* Black */
-    color: #fff;
+.email-box,
+.customer-books,
+.repeat-customer-box,
+.newsletter-box,
+.happy-builder {
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match section gradient */
+    color: #FFFFFF;
     padding: 0.5rem 1rem;
     margin: 1rem auto;
     border-radius: 5px;
@@ -191,40 +209,33 @@ footer p {
     font-weight: bold;
     max-width: 200px;
     position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-box {
-    background: #4A4A4A; /* Gray */
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 1rem auto;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #39FF14, #00B7EB); /* Neon green to electric blue */
     font-size: 0.9rem;
-    max-width: 200px;
-    position: relative;
 }
 
-.happy-builder {
-    background: #1A2526; /* Black */
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 1rem auto;
-    border-radius: 5px;
-    font-size: 1rem;
-    max-width: 200px;
-    position: relative;
+.repeat-customer-box {
+    background: linear-gradient(135deg, #00B7EB, #39FF14); /* Electric blue to neon green */
 }
 
-.arrow {
+.arrow,
+.left-arrow,
+.right-arrow {
     position: absolute;
     width: 2px;
-    background: #1A2526; /* Black */
+    background: #FFFFFF;
     height: 20px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glow effect */
 }
 
-.arrow::after {
+.arrow::after,
+.left-arrow::after,
+.right-arrow::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -232,17 +243,18 @@ footer p {
     transform: translateX(-50%);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #1A2526;
+    border-top: 8px solid #FFFFFF;
 }
 
 .newsletter-arrow {
     position: absolute;
     width: 2px;
-    background: #4A4A4A; /* Gray */
+    background: #FFFFFF;
     height: 40px;
     left: 50%;
     transform: translateX(-50%);
     top: -50px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glow effect */
 }
 
 .newsletter-arrow::after {
@@ -253,7 +265,73 @@ footer p {
     transform: translateX(-50%);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #4A4A4A;
+    border-top: 8px solid #FFFFFF;
+}
+
+/* Split Paths for Diagram */
+.split-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.left-arrow {
+    left: 25%;
+}
+
+.right-arrow {
+    left: 75%;
+}
+
+.split-paths {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-path,
+.right-path {
+    width: 45%;
+    position: relative;
+}
+
+/* Proof Section - Testimonial Style */
+.testimonial-quote {
+    position: relative;
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-quote::before,
+.testimonial-quote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #39FF14; /* Neon green */
+    position: absolute;
+    opacity: 0.5;
+}
+
+.testimonial-quote::before {
+    top: -1rem;
+    left: -1rem;
+}
+
+.testimonial-quote::after {
+    bottom: -1rem;
+    right: -1rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header */
+    color: #FFFFFF; /* White */
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    color: #D3D3D3; /* Light gray */
 }
 
 @media (max-width: 800px) {
@@ -285,6 +363,18 @@ footer p {
     .diagram-container {
         max-width: 100%;
     }
+    .split-paths {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-path,
+    .right-path {
+        width: 100%;
+    }
+    .left-arrow,
+    .right-arrow {
+        left: 50%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -293,6 +383,6 @@ footer p {
     p, li { font-size: 1rem; }
     .cta-button { padding: 0.8rem 1.5rem; font-size: 1rem; }
     .diagram-container { padding: 0.5rem; }
-    .email-box, .newsletter-box, .happy-builder { font-size: 0.9rem; padding: 0.5rem; }
+    .email-box, .customer-books, .repeat-customer-box, .newsletter-box, .happy-builder { font-size: 0.9rem; padding: 0.5rem; }
     .header-image-placeholder { height: 200px; }
 }
