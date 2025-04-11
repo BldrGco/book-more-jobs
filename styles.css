@@ -91,19 +91,14 @@ li {
     align-items: center;
 }
 
-.image-placeholder {
+.header-image-placeholder img {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    border: 2px dashed #FFFFFF;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
     border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 1rem;
+    border: 2px solid #FFFFFF; /* White border to match the design */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    display: block; /* Ensure the image is visible */
 }
 
 .cta-button {
@@ -357,6 +352,9 @@ footer p {
     .header-image-placeholder {
         max-width: 100%;
         height: 300px;
+    }
+    .header-image-placeholder img {
+        height: 100%;
     }
     .solution-content {
         flex-direction: column;
