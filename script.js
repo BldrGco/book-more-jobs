@@ -13,3 +13,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Fade-in animation for Solution section
+window.addEventListener('scroll', () => {
+    const solutionSection = document.querySelector('#solution');
+    const sectionPosition = solutionSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (sectionPosition < screenPosition) {
+        solutionSection.classList.add('visible');
+    }
+});
