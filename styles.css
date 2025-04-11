@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #4B0082, #FF00FF); /* Deep purple to magenta gradient */
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Deep purple to electric blue gradient */
     height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ h1 {
 }
 
 .title-part2 {
-    color: #00FFFF; /* Bright cyan */
+    color: #39FF14; /* Neon green */
 }
 
 h2 {
@@ -100,7 +100,7 @@ p {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(#00FFFF, #FF00FF); /* Cyan to magenta gradient */
+    background: linear-gradient(#39FF14, #00B7EB); /* Neon green to electric blue gradient */
     color: #FFFFFF;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -114,7 +114,7 @@ p {
 }
 
 .cta-button:hover {
-    background: linear-gradient(#FF00FF, #00FFFF);
+    background: linear-gradient(#00B7EB, #39FF14);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
@@ -136,7 +136,7 @@ section {
 }
 
 footer {
-    background: linear-gradient(135deg, #4B0082, #FF00FF); /* Match Header */
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header */
     color: #FFFFFF; /* White */
     padding: 2rem 1rem;
 }
