@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book More Jobs with Email | Email Clarity Kickstart</title>
+    <!-- Inline CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #F5F5F5; /* Light gray */
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            background: #3B6A9C; /* Steel blue */
+            padding: 3rem 1rem; /* Increased padding for breathing room */
+            border-bottom: 4px solid #333;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow for visual pop */
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #3B6A9C;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            padding: 0 1rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0 1rem;
+            margin: 1rem 0;
+            max-width: 600px;
+        }
+        li {
+            font-size: 1.1rem;
+            margin: 0.75rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(#3B6A9C, #2F5A85);
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #333;
+            border-radius: 12px;
+            margin: 1rem auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: linear-gradient(#4A8BC2, #3B6A9C);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 2rem 1rem;
+        }
+        #problem {
+            background: #E8ECEF;
+        }
+        #solution {
+            background: #F5F5F5;
+        }
+        #proof {
+            background: #E8ECEF;
+        }
+        footer {
+            background: #3B6A9C;
+            color: #fff;
+            padding: 2rem 1rem;
+        }
+        footer p {
+            margin-bottom: 1rem;
+        }
+        /* Solution Section - Side by Side Layout */
+        .solution-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            gap: 2rem;
+        }
+        .solution-text {
+            flex: 1;
+            text-align: left;
+            max-width: 500px;
+        }
+        .solution-text ul {
+            text-align: left;
+            margin: 1rem 0;
+        }
+        /* Diagram Styles */
+        .diagram-container {
+            flex: 1;
+            max-width: 500px;
+            padding: 1rem;
+            background: #fff;
+            border: 2px solid #3B6A9C;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+        }
+        .email-box {
+            background: #3B6A9C;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 1rem auto;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            max-width: 200px;
+            position: relative;
+        }
+        .newsletter-box {
+            background: #4A8BC2; /* Lighter blue */
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 1rem auto;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            max-width: 200px;
+            position: relative;
+        }
+        .happy-builder {
+            background: #3B6A9C;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 1rem auto;
+            border-radius: 5px;
+            font-size: 1rem;
+            max-width: 200px;
+            position: relative;
+        }
+        .arrow {
+            position: absolute;
+            width: 2px;
+            background: #3B6A9C;
+            height: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #3B6A9C;
+        }
+        .newsletter-arrow {
+            position: absolute;
+            width: 2px;
+            background: #4A8BC2;
+            height: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -50px;
+        }
+        .newsletter-arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #4A8BC2;
+        }
+        @media (max-width: 800px) {
+            .solution-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .solution-text {
+                text-align: center;
+                max-width: 100%;
+            }
+            .solution-text ul {
+                text-align: center;
+                margin: 1rem auto;
+            }
+            .diagram-container {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.2rem; }
+            p, li { font-size: 1rem; }
+            .cta-button { padding: 0.8rem 1.5rem; font-size: 1rem; }
+            .diagram-container { padding: 0.5rem; }
+            .email-box, .newsletter-box, .happy-builder { font-size: 0.9rem; padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Book More Jobs with Proven Email Strategy</h1>
+        <p>I’ve helped brands fill their pipeline with emails—now I’m bringing it to builders for £350.</p>
+        <a href="#" class="cta-button" id="header-cta">Grab a Free 15-Minute Chat</a>
+    </header>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <h2>Leads Drying Up?</h2>
+        <p>Builders miss jobs because inquiries fizzle out. I’ve seen the gap—email works, but you’re not using it.</p>
+        <ul>
+            <li>Quotes sit unanswered.</li>
+            <li>No time to chase leads.</li>
+            <li>Referrals alone aren’t cutting it.</li>
+        </ul>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <h2>My Email Clarity Kickstart Delivers</h2>
+        <div class="solution-content">
+            <div class="solution-text">
+                <p>For £350, get 3 custom emails + a strategy to turn leads into jobs. I’ve crafted campaigns that convert for brands—builders are next.</p>
+                <p>Want to stand out? Add a £100 newsletter to build trust and win repeat work.</p>
+                <ul>
+                    <li>Welcome email to grab attention.</li>
+                    <li>Follow-up to book the job.</li>
+                    <li>Promo to fill slow months.</li>
+                </ul>
+            </div>
+            <div class="diagram-container">
+                <!-- Email Sequence Diagram -->
+                <div class="email-box">Welcome Email</div>
+                <div class="arrow"></div>
+                <div class="email-box">Follow-up Email</div>
+                <div class="arrow"></div>
+                <div class="email-box">Promo Email</div>
+                <div class="newsletter-arrow"></div>
+                <div class="newsletter-box">+ £100 Newsletter (Build Trust)</div>
+                <div class="arrow"></div>
+                <div class="happy-builder">Happy Builder! 😊</div>
+            </div>
+        </div>
+        <a href="#" class="cta-button">Book Your Free Chat Now</a>
+    </section>
+
+    <!-- Proof Section -->
+    <section id="proof">
+        <h2>Why Me?</h2>
+        <p>I’ve helped brands with email strategy and newsletters and know builders from the inside. My Substack simplifies big ideas for thousands—your emails get that edge.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>2 spots this month—includes a £100 newsletter option to boost your brand.</p>
+        <p>Bonus: Free £49 Growth Mindset Blueprint to grow your business.</p>
+        <p>Email: [your-email@example.com]</p>
+        <a href="#" class="cta-button" id="footer-cta">Secure Your Spot—Free Chat</a>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Replace CTA hrefs with your Calendly link later
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+            button.href = '#'; // Placeholder—swap with Calendly
+        });
+
+        // Smooth scroll (if you add internal links later)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
