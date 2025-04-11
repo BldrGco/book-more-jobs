@@ -6,14 +6,13 @@
 }
 
 body {
-    background: #F5F5F5; /* Light gray */
+    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Deep purple to electric blue gradient for the entire page */
     color: #333;
     line-height: 1.6;
     text-align: center;
 }
 
 header {
-    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Deep purple to electric blue gradient */
     height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
@@ -59,7 +58,6 @@ h2 {
     font-family: 'Poppins', sans-serif; /* Keep Poppins for h2 */
     font-size: 1.5rem;
     margin: 1rem 0;
-    color: #1A2526; /* Black */
     font-weight: bold;
 }
 
@@ -69,7 +67,6 @@ p {
     max-width: 800px;
     margin: 0 auto 1.5rem;
     padding: 0 1rem;
-    color: #D3D3D3; /* Light gray in Header */
 }
 
 li {
@@ -79,7 +76,7 @@ li {
 }
 
 .header-text p {
-    color: #D3D3D3; /* Light gray for subheadline */
+    color: #D3D3D3; /* Light gray for subheadline in header */
 }
 
 .header-image-placeholder {
@@ -123,26 +120,39 @@ li {
     transform: translateY(-2px);
 }
 
-section {
+section, footer {
     padding: 2rem 1rem;
 }
 
-/* Gradient Sections */
-.gradient-section {
-    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header/Footer */
-    color: #FFFFFF;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+/* White Content Blocks for Sections After Header */
+.content-block {
+    background: #FFFFFF; /* Solid white background */
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px; /* Limits text width for readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.gradient-section h2 {
-    color: #FFFFFF; /* White headings */
+.content-block h2 {
+    color: #4B0082; /* Deep purple for headings */
 }
 
-.gradient-section p,
-.gradient-section li {
-    color: #D3D3D3; /* Light gray text */
+.content-block p,
+.content-block li {
+    color: #333; /* Dark gray for text in white blocks */
+}
+
+.content-block ul,
+.content-block ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.content-block ul li,
+.content-block ol li {
+    margin-bottom: 0.5rem;
 }
 
 /* Problem Section - Hammer Icon */
@@ -179,11 +189,6 @@ section {
     flex: 1;
     text-align: left;
     max-width: 500px;
-}
-
-.solution-text ul {
-    text-align: left;
-    margin: 1rem 0;
 }
 
 /* Updated Diagram Styles */
@@ -326,17 +331,6 @@ section {
 .testimonial-quote::after {
     bottom: -1rem;
     right: -1rem;
-}
-
-footer {
-    background: linear-gradient(135deg, #4B0082, #00B7EB); /* Match Header */
-    color: #FFFFFF; /* White */
-    padding: 2rem 1rem;
-}
-
-footer p {
-    margin-bottom: 1rem;
-    color: #D3D3D3; /* Light gray */
 }
 
 @media (max-width: 800px) {
