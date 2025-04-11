@@ -13,17 +13,46 @@ body {
 }
 
 header {
-    background: #E6E6FA; /* Soft purple (lavender) */
-    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #4B0082, #FF00FF); /* Deep purple to magenta gradient */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-bottom: 4px solid #333;
+    padding: 2rem 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+    flex: 1;
+}
+
+.header-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1A2526; /* Black */
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Rounded, modern font */
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+}
+
+.title-part1 {
+    color: #FFFFFF; /* White */
+}
+
+.title-part2 {
+    color: #00FFFF; /* Bright cyan */
 }
 
 h2 {
@@ -38,39 +67,55 @@ p {
     max-width: 800px;
     margin: 0 auto 1.5rem;
     padding: 0 1rem;
-    color: #4A4A4A; /* Gray */
+    color: #D3D3D3; /* Light gray in Header */
 }
 
-ul {
-    list-style: none;
-    padding: 0 1rem;
-    margin: 1rem 0;
+.header-text p {
+    color: #D3D3D3; /* Light gray for subheadline */
+}
+
+.header-image-placeholder {
+    flex: 1;
     max-width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-li {
-    font-size: 1.1rem;
-    margin: 0.75rem 0;
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border: 2px dashed #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(#1A2526, #2F3A44); /* Dark gradient to match black/gray theme */
-    color: #fff;
+    background: linear-gradient(#00FFFF, #FF00FF); /* Cyan to magenta gradient */
+    color: #FFFFFF;
     padding: 1rem 2rem;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    border: 2px solid #333;
+    border: 2px solid #FFFFFF;
     border-radius: 12px;
     margin: 1rem auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: linear-gradient(#2F3A44, #1A2526);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(#FF00FF, #00FFFF);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
 
@@ -91,14 +136,14 @@ section {
 }
 
 footer {
-    background: #E6E6FA; /* Soft purple */
-    color: #1A2526; /* Black */
+    background: linear-gradient(135deg, #4B0082, #FF00FF); /* Match Header */
+    color: #FFFFFF; /* White */
     padding: 2rem 1rem;
 }
 
 footer p {
     margin-bottom: 1rem;
-    color: #4A4A4A; /* Gray */
+    color: #D3D3D3; /* Light gray */
 }
 
 /* Solution Section - Side by Side Layout */
@@ -212,6 +257,19 @@ footer p {
 }
 
 @media (max-width: 800px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header-text {
+        text-align: center;
+        max-width: 100%;
+    }
+    .header-image-placeholder {
+        max-width: 100%;
+        height: 300px;
+    }
     .solution-content {
         flex-direction: column;
         align-items: center;
@@ -230,10 +288,11 @@ footer p {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 1.5rem; }
+    h1 { font-size: 2rem; }
     h2 { font-size: 1.2rem; }
     p, li { font-size: 1rem; }
     .cta-button { padding: 0.8rem 1.5rem; font-size: 1rem; }
     .diagram-container { padding: 0.5rem; }
     .email-box, .newsletter-box, .happy-builder { font-size: 0.9rem; padding: 0.5rem; }
+    .header-image-placeholder { height: 200px; }
 }
