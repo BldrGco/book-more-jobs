@@ -1,7 +1,7 @@
-// Replace CTA hrefs with your Calendly link later
+// Set CTA hrefs to Calendly link
 const ctaButtons = document.querySelectorAll('.cta-button');
 ctaButtons.forEach(button => {
-    button.href = '#'; // Placeholder—swap with Calendly
+    button.href = 'https://calendly.com/jezlpstuart/30min'; // Updated to your Calendly link
 });
 
 // Smooth scroll (if you add internal links later)
